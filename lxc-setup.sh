@@ -71,7 +71,7 @@ systemctl enable postgresql
 systemctl start postgresql
 
 # Create database and user
--u postgres psql <<EOF
+postgres psql <<EOF
 CREATE USER ${DB_USER} WITH PASSWORD '${DB_PASS}';
 CREATE DATABASE ${DB_NAME} OWNER ${DB_USER};
 GRANT ALL PRIVILEGES ON DATABASE ${DB_NAME} TO ${DB_USER};
